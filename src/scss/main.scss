@@ -1,0 +1,139 @@
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .main__screen {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+
+        display: flex;
+        justify-content: center;
+
+        .main__fullscreen-image {
+            position: absolute !important;
+            // background: url('../../assets/images/main-screen__bgc.jpg') no-repeat center center;
+            // background-size: cover;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .screen {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            z-index: 10;
+
+            display: flex;
+            justify-content: center;
+
+
+            .introducing {
+                position: absolute;
+                top: 270px;
+
+                &__title {
+                    font-family: Roboto;
+                    font-size: 64px;
+                    font-weight: bold;
+                }
+
+                &__time {
+                    display: flex;
+
+                    .introducing__time-square {
+
+                        width: 102px;
+                        height: 112px;
+                        background: #121212;
+                        margin-right: 30px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+
+                        .number {
+                            font-weight: bold;
+                            font-size: 36px;
+                            line-height: 140%;
+                        }
+
+                        .number-name {
+                            color: rgba($color: #fff, $alpha: .4);
+                        }
+                    }
+                }
+            }
+
+            .last-line {
+                position: absolute;
+                bottom: 0;
+                width: 100vw;
+                height: 130px;
+                background: #121212;
+
+                display: flex;
+                justify-content: space-between;
+
+                line-height: 150%;
+                color: rgba($color: #fff, $alpha: .4);
+
+                &__button {
+                    width: 169px;
+                    height: 44px;
+                    border-radius: 50px;
+                    color: white;
+                    font-weight: bold;
+                    line-height: 150%;
+
+                    transition: all .1s ease-in-out;
+                    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+
+
+                    &:hover {
+                        background: linear-gradient(85deg, #DF5950 8%, #451046 80%);
+                    }
+                }
+
+                .people {
+                    &__line {
+                        &__title {}
+
+                        &__number {
+                            color: white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .money {
+                    &__line {
+                        .line_title {}
+
+                        .line_number {
+                            color: white;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &__bar {
+                        .bar {}
+
+                        .start {}
+
+                        .end {}
+                    }
+                }
+            }
+        }
+    }
+
+    .main__content {}
+}

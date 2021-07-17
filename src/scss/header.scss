@@ -1,0 +1,84 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+
+    &__container {
+        position: relative;
+        width: 100%;
+        margin: 0 80px;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+
+        .header__logo {
+            width: 40px;
+            height: 40px;
+            // margin-right: auto;
+        }
+
+        .header__menu {
+            margin: auto;
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+
+                li {
+                    // display: inline-block;
+                    padding: 0 56px 0;
+
+                    &:last-child {
+                        padding: 0;
+                    }
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        // display: ;
+                        transition: all .05s linear;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__login_btn {
+            button {
+                width: 183px;
+                height: 44px;
+                border-radius: 50px;
+                color: white;
+                border: none;
+                font-size: 16px;
+                font-weight: bold;
+
+                transition: all .1s ease-in;
+
+                /* grad2 */
+                background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+
+                // position: absolute;
+                // top: 50%;
+                // right: 0;
+                // transform: translateY(-50%);
+
+                &:hover {
+                    background: linear-gradient(84deg, #C89AFC 6%, #7C6AFA 70%);
+                }
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+    }
+}
