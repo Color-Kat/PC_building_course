@@ -1,0 +1,15 @@
+$lg: '1435px';
+$md1: '1060px';
+$md2: '914px';
+$sm: '625px';
+
+$wf: #fff;
+$dark-font: rgba(255, 255, 255, .4);
+
+@mixin title($fz) {
+    color: $wf;
+    line-height: 140%;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: $fz;
+}

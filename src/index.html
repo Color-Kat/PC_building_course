@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoe landing</title>
+    <title>GiperPC</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__container">
-            <img class="header__logo" src="/assets/icons/logo.svg" alt="logo">
-            <div class="header__menu">
-                <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Курсы</a></li>
-                    <li><a href="#">Расписание</a></li>
-                    <li><a href="#">Преподаватели</a></li>
-                    <li><a href="#">Рассылка</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="header__login_btn">
-                <button>Зайти в кабинет</button>
-            </div>
-        </div>
-    </header>
 
     <main>
+        <header class="header">
+            <div class="header__container">
+                <img class="header__logo" src="/assets/icons/logo.svg" alt="logo">
+                <div class="header__menu">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Курсы</a></li>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Преподаватели</a></li>
+                        <li><a href="#">Рассылка</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__login_btn">
+                    <button>Зайти в кабинет</button>
+                </div>
+            </div>
+        </header>
         <div class="main__screen">
             <!-- CONTENT -->
             <div class="screen">
@@ -60,7 +60,7 @@
                 
                 <!-- LAST LINE -->
                 <div class="last-line">
-                    <div class="container">
+                    <div class="last-line__container container">
                         <button class="last-line__button">Заказать курс</button>
 
                         <div class="people">
@@ -83,11 +83,12 @@
 
                             <div class="money__bar">
                                 <div class="bar"></div>
+                            </div>
+
+                            <div class="progress">
                                 <span class="start">0</span>
                                 <span class="end">1 000 000₽</span>
                             </div>
-
-                            
                         </div>
                     </div>
                 </div>
@@ -104,9 +105,26 @@
             </div>
             <!-- IMAGE -->
 
-        </di>
+        </div>
 
-        <div class="main__content"></div>
+        <div class="main__content">
+
+            <!-- WHAT do WE DO?  -->
+            <section class="what-do">
+                <div class="col-6 what-do__illustration">
+                    <img class="pc-img" src="/assets/images/pc.png" alt="pc">
+                    <img class="square-img" src="/assets/images/square.png" alt="">
+                </div>
+
+                <div class="col-6 what-do__text">
+                    <h2>Чем мы занимаемся?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget neque, dignissim et feugiat elit augue in suspendisse egestas. Dictum vestibulum mi et sed nunc, orci fermentum vestibulum, morbi. Et neque, adipiscing sapien sem senectus praesent aenean consequat. Aenean facilisi turpis aliquet fringilla. Nunc sem felis sed interdum feugiat mattis elit, sollicitudin. Quam pharetra rhoncus risus, cursus id elementum aliquet. Nullam turpis arcu malesuada arcu interdum placerat nisi, lobortis. </p>
+                </div>
+            </section>
+            <!-- WHAT do WE DO?  -->
+
+
+        </div>
     </main>
 
     <footer>

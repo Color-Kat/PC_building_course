@@ -1,15 +1,15 @@
 main {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
 
-    overflow-y: scroll;
     overflow-x: hidden;
+    overflow-y: scroll;
 
     .main__screen {
-        position: absolute;
-        height: inherit;
-        width: inherit;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
 
         display: flex;
         justify-content: center;
@@ -37,10 +37,22 @@ main {
                 position: absolute;
                 top: 270px;
 
+                @media (max-width: $sm) {
+                    top: 140px;
+                }
+
                 &__title {
-                    font-family: Roboto;
-                    font-size: 64px;
-                    font-weight: bold;
+                    // font-family: Roboto;
+                    // font-size: 64px;
+                    // font-weight: bold;
+
+                    // @media (max-width: $md2) {
+                    //     font-size: 48px;
+                    // }
+
+                    // @media (max-width: $sm) {
+                    //     font-size: 36px;
+                    // }
                 }
 
                 &__time {
@@ -53,6 +65,11 @@ main {
                         background: #121212;
                         margin-right: 30px;
 
+                        @media (max-width: $sm) {
+                            width: 76px;
+                            height: 84px;
+                        }
+
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -63,10 +80,14 @@ main {
                             font-weight: bold;
                             font-size: 36px;
                             line-height: 140%;
+
+                            @media (max-width: $sm) {
+                                font-size: 24px;
+                            }
                         }
 
                         .number-name {
-                            color: rgba($color: #fff, $alpha: .4);
+                            color: $dark-font;
                         }
                     }
                 }
@@ -76,59 +97,134 @@ main {
                 position: absolute;
                 bottom: 0;
                 width: 100vw;
-                height: 130px;
+                min-height: 130px;
+
+                @media (max-width: $sm) {
+                    bottom: -180px;
+                    padding-bottom: -180px;
+                }
+
                 background: #121212;
 
                 display: flex;
-                justify-content: space-between;
+                align-items: center;
 
                 line-height: 150%;
-                color: rgba($color: #fff, $alpha: .4);
+                color: $dark-font;
 
-                &__button {
-                    width: 169px;
-                    height: 44px;
-                    border-radius: 50px;
-                    color: white;
-                    font-weight: bold;
-                    line-height: 150%;
+                &__container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
 
-                    transition: all .1s ease-in-out;
-                    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+                    @media (max-width: $sm) {
+                        padding-top: 10px;
+                        flex-direction: column;
 
-
-                    &:hover {
-                        background: linear-gradient(85deg, #DF5950 8%, #451046 80%);
-                    }
-                }
-
-                .people {
-                    &__line {
-                        &__title {}
-
-                        &__number {
-                            color: white;
-                            font-weight: bold;
-                        }
-                    }
-                }
-
-                .money {
-                    &__line {
-                        .line_title {}
-
-                        .line_number {
-                            color: white;
-                            font-weight: bold;
+                        &>* {
+                            width: 100%;
+                            margin: 15px auto !important;
                         }
                     }
 
-                    &__bar {
-                        .bar {}
+                    .last-line__button {
+                        width: 169px;
+                        height: 44px;
+                        border-radius: 50px;
+                        color: white;
+                        font-weight: bold;
+                        line-height: 150%;
 
-                        .start {}
+                        transition: all .1s ease-in-out;
+                        background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
 
-                        .end {}
+
+                        &:hover {
+                            background: linear-gradient(85deg, #DF5950 8%, #451046 80%);
+                        }
+                    }
+
+                    .people {
+                        width: 251px;
+                        height: 58px;
+
+                        @media (max-width: $md2) {
+                            display: none;
+                        }
+
+                        @media (max-width: $sm) {
+                            display: block;
+                        }
+
+                        &__line {
+                            display: flex;
+                            justify-content: space-between;
+
+                            &:first-child {
+                                margin-bottom: 10px;
+                            }
+
+                            &__title {}
+
+                            &__number {
+                                color: white;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .money {
+                        width: 714px;
+
+                        @media (max-width: $lg) {
+                            width: 400px;
+                        }
+
+                        @media (max-width: $md1) {
+                            width: 290px;
+                        }
+
+                        &__line {
+                            .line_title {}
+
+                            .line_number {
+                                color: $wf;
+                                font-weight: bold;
+                                margin-left: 30px;
+                            }
+                        }
+
+                        &__bar {
+                            position: relative;
+                            width: 100%;
+                            margin: 10px 0 5px;
+
+                            .bar {
+                                width: 100%;
+                                height: 6px;
+                                background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    background: white;
+                                    width: 60%;
+                                    height: 6px;
+                                    z-index: 2;
+                                }
+                            }
+                        }
+
+                        .progress {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .start {}
+
+                            .end {}
+                        }
                     }
                 }
             }

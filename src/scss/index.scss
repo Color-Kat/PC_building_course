@@ -3,8 +3,10 @@
 // ============================== FONTS ============================
 
 // ============================ COMPONENTS =========================
+@import "_variables.scss";
 @import "header.scss";
 @import "main.scss";
+@import "main-content.scss";
 // ============================ COMPONENTS =========================
 
 html,
@@ -19,7 +21,7 @@ body {
     font-weight: 400;
     font-size: 16px;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 button {
@@ -35,6 +37,45 @@ button {
 .container {
     width: 1301px;
     margin: auto;
+
+    @media (max-width: $lg) {
+        width: 1000px;
+    }
+
+    @media (max-width: $md1) {
+        width: 784px;
+    }
+
+    @media (max-width: $md2) {
+        width: 536px;
+    }
+
+    @media (max-width: $sm) {
+        width: 93%;
+    }
+}
+
+h1 {
+    font-family: Roboto;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 140%;
+    color: $wf;
+
+    @media (max-width: $md2) {
+        font-size: 48px;
+    }
+
+    @media (max-width: $sm) {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    line-height: 140%;
+    font-size: 48px;
+    font-weight: bold;
+    color: $wf;
 }
 
 // ======== CONTAINER ==========
