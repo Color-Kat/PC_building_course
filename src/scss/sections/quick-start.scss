@@ -108,7 +108,7 @@
                 padding-right: 18px;
 
                 @media (max-width: $md2) {
-                    width: 200px;
+                    // width: 400px;
                     height: 60vw;
                     padding-right: 0;
                     // margin: 0 200px;
@@ -121,12 +121,6 @@
                         position: absolute;
                         width: 60vw;
                         transform: rotate(-90deg);
-                    }
-                }
-
-                @media (max-width: $sm) {
-                    span {
-                        height: 300px;
                     }
                 }
             }
