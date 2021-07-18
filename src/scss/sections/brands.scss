@@ -1,0 +1,41 @@
+.brands {
+    &__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+
+        img {
+            height: 127px;
+            width: 127px;
+            margin-right: 20px;
+            transform: rotate(180deg);
+        }
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .brands-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow: hidden;
+
+        .brand-list__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+
+            // remove unless border
+            margin: -1px;
+
+            border: 1px solid rgba($color: #fff, $alpha: .3);
+            border-top: 0;
+
+
+
+            img {}
+        }
+    }
+}
