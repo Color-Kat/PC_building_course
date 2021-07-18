@@ -24,7 +24,7 @@ main {
         }
 
         .screen {
-            position: absolute;
+            position: relative;
             width: inherit;
             height: inherit;
             z-index: 10;
@@ -35,7 +35,7 @@ main {
 
             .introducing {
                 position: absolute;
-                top: 270px;
+                top: 170px;
 
                 @media (max-width: $sm) {
                     top: 140px;

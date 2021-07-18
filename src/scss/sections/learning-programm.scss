@@ -1,0 +1,21 @@
+.programm {
+    &__title {
+        img {}
+    }
+
+    &__schedule {
+        .schedule-line {}
+
+        &__item {
+            &.right {}
+
+            .line {}
+
+            .item_content {}
+
+            .time {}
+
+            .description {}
+        }
+    }
+}
