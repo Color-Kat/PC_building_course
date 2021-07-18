@@ -1,8 +1,13 @@
+@import './sections/what-do.scss';
+@import './sections/quick-start.scss';
+
 .main__content {
     position: relative;
     width: 100vw;
     height: max-content;
     background: url('../../assets/images/bgc.jpg');
 
-
+    section {
+        margin: 100px auto;
+    }
 }
