@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: url('../../assets/images/bgc.jpg');
 }

@@ -27,15 +27,19 @@
             align-items: center;
             height: 150px;
 
+            @media (max-width: $sm) {
+                height: 75px;
+            }
+
             // remove unless border
             margin: -1px;
 
             border: 1px solid rgba($color: #fff, $alpha: .3);
             border-top: 0;
 
-
-
-            img {}
+            img {
+                width: 80%;
+            }
         }
     }
 }
