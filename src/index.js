@@ -1,4 +1,10 @@
 import './scss/index.scss';
+import touch_class from './modules/touch_class';
+import dropDownMenu from './modules/dropDownMenu';
+import toggleMenu from './modules/toggleMenu';
+
+touch_class();
+dropDownMenu();
 
 // ibg - change html img for css background-img
 function ibg() {
@@ -13,3 +19,5 @@ function ibg() {
 }
 
 ibg();
+
+document.querySelector('.menu__icon').addEventListener('click', toggleMenu);

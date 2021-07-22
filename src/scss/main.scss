@@ -11,6 +11,10 @@ main {
         height: 100vh;
         width: 100vw;
 
+        @media (max-width: $sm) {
+            margin-bottom: 275px;
+        }
+
         display: flex;
         justify-content: center;
 
@@ -35,10 +39,10 @@ main {
 
             .introducing {
                 position: absolute;
-                top: 170px;
+                top: 270px;
 
-                @media (max-width: $sm) {
-                    top: 140px;
+                @media (max-height: 757px) {
+                    top: 180px;
                 }
 
                 &__title {
