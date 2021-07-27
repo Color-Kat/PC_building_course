@@ -111,7 +111,7 @@
         justify-content: space-between;
 
         width: 100%;
-        padding: 0 80px;
+        // padding: 0 80px;
 
         @media (max-width: $md1) {
             padding: 0 15px;
@@ -242,12 +242,15 @@
                         height: 100%;
 
                         .menu__list {
-                            // max-height: 100%;
-                            min-height: fit-content;
                             width: 100%;
+                            height: max-content;
                             margin: $header_height auto 30px auto;
                             padding: 0 30px;
                             overflow: auto !important;
+
+                            .menu__sub-list {
+                                margin-bottom: 20px;
+                            }
                         }
 
                         transition: all .3s ease;
@@ -331,7 +334,6 @@
                         /* menu sub-list */
                         .menu__sub-list {
                             position: absolute;
-                            // flex: 1 1 100%;
                             width: 100%;
                             margin-top: 20px !important;
                             opacity: 0;
@@ -354,7 +356,6 @@
                             transform: translateY(0);
                         }
 
-
                         /* meni sub-list */
                     }
                 }
@@ -374,6 +375,7 @@
                     min-width: 200px;
 
                     li {
+                        margin: 0;
                         margin-bottom: 5px;
 
                         &:last-child {

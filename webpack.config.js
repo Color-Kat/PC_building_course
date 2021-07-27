@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 const path = require("path");
 
 // Добавляет HTML и подключает туда собранные js файлы
@@ -23,6 +25,9 @@ const {
 
 // Определяет, в каком моде запущено приложение с помощью process
 const isDev = process.env.NODE_ENV === "development";
+
+// Путь к папке assets
+const ASSET_PATH = process.env.ASSET_PATH || './';
 
 // В зависимости от режима сборки (prod или dev) возвращает различные названия файлов (с хешем и без)
 const filename = ext => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
@@ -104,24 +109,28 @@ const plugins = () => {
             // Минификация
             minify: false
             // {
-                // Убрать пробелы, если в продакшене
-                // collapseWhitespace: !isDev
+            // Убрать пробелы, если в продакшене
+            // collapseWhitespace: !isDev
             // }
         }),
         new CleanWebpackPlugin(),
-        // new CopyWebpackPlugin({
-        //     patterns: [{
-        //         from: path.resolve(__dirname, "src/favicon.ico"),
-        //         to: path.resolve(__dirname, "dist")
-        //     }]
-        // }),
         new MiniCssExtractPlugin({
             filename: filename("css")
-        })
+        }),
+        // new webpack.DefinePlugin({
+        //     'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+        // })
     ];
 
+    // production
     if (!isDev) {
         base.push(new BundleAnalyzerPlugin());
+        base.push(new CopyWebpackPlugin({
+            patterns: [{
+                from: path.resolve(__dirname, "assets"),
+                to: path.resolve(__dirname, "dist/assets")
+            }]
+        }));
     }
 
     return base;
@@ -136,6 +145,7 @@ module.exports = {
         main: ["./index.js"]
     },
     output: {
+        // publicPath: 'auto',
         filename: filename("js"), // Название выходного файла сборки
         path: path.resolve(__dirname, "dist") // Путь к dist
     },
